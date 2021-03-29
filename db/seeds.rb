@@ -14,3 +14,5 @@ recipes = JSON.parse(response)["results"]
 recipes.each do |recipe|
     Recipe.create(title: recipe["title"], ingredients: recipe["ingredients"], img_url: recipe["thumbnail"])
 end
+
+# Recipe.get_data
