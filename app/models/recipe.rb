@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-    belongs_to :user 
+    belongs_to :user, optional: true 
 
     def self.get_data
         response = RestClient.get("http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3")
